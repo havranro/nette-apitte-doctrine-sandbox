@@ -1,2 +1,2 @@
-My2N Guest Access
+Nette 3.0 - Apitte - Nettrine - Request Validation - Value Objects
 =================
