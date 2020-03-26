@@ -1,0 +1,58 @@
+parameters:
+
+session:
+	expiration: 14 days
+
+extensions:
+	# Dbal
+	dbal: Nettrine\DBAL\DI\DbalExtension
+
+	# Orm
+	orm: Nettrine\ORM\DI\OrmExtension
+	orm.cache: Nettrine\ORM\DI\OrmCacheExtension
+	orm.annotations: Nettrine\ORM\DI\OrmAnnotationsExtension
+
+	# Apitte
+	api: Apitte\Core\DI\ApiExtension
+	middleware: Contributte\Middlewares\DI\MiddlewaresExtension
+	resource: Contributte\DI\Extension\ResourceExtension
+
+middleware:
+	middlewares:
+		- Apitte\Middlewares\ApiMiddleware
+
+api:
+    debug: %debugMode%
+    plugins:
+            Apitte\Core\DI\Plugin\CoreDecoratorPlugin:
+            Apitte\Core\DI\Plugin\CoreMappingPlugin:
+            Apitte\Negotiation\DI\NegotiationPlugin:
+            Apitte\Debug\DI\DebugPlugin:
+                debug: %debugMode%
+
+dbal:
+	connection:
+		driver:
+		host:
+		port:
+		user:
+		password:
+		dbname:
+
+orm.annotations:
+	paths:
+		- App\Entity
+
+services:
+	- App\Entity\Factory\UserEntityFactory
+
+resource:
+	resources:
+		App\Api\ValueObject\:
+			paths: [%appDir%/ValueObject]
+			decorator:
+				inject: true
+		App\Api\Controller\:
+			paths: [%appDir%/Controller]
+			decorator:
+				inject: true

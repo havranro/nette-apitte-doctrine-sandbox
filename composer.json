@@ -1,0 +1,38 @@
+{
+	"name": "Nette-Apitte-Doctrine-Sandbox",
+	"type": "project",
+	"authors": [
+		{
+			"name": "Pavel Kraus"
+		},
+		{
+			"name": "Roman Havránek"
+		}
+	],
+	"require": {
+		"php": ">=7.3",
+		"nette/application": "^3.0",
+		"nette/bootstrap": "^3.0",
+		"nette/caching": "^3.0",
+		"nette/di": "^3.0",
+		"nette/finder": "^2.5",
+		"nette/http": "^3.0",
+		"nette/mail": "^3.0",
+		"nette/robot-loader": "^3.0",
+		"nette/safe-stream": "^2.4",
+		"nette/security": "^3.0",
+		"nette/utils": "^3.0",
+		"nettrine/orm": "0.4.0",
+      	"ext-curl": "*",
+      	"ext-json": "*",
+		"symfony/validator": "^5.0",
+		"apitte/core": "^0.7.0",
+		"apitte/middlewares": "^0.7.0",
+		"apitte/negotiation": "^0.7.0",
+		"apitte/debug": "^0.7.0"
+	},
+	"autoload": {
+		"classmap": ["app/Bootstrap.php"]
+	},
+	"minimum-stability": "stable"
+}

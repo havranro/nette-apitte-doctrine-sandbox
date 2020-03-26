@@ -1,0 +1,9 @@
+version: "3.5"
+services:
+  web:
+    build: .
+    container_name: sandbox
+    ports:
+      - "80:80"
+    volumes:
+      - "./:/var/www/html"
