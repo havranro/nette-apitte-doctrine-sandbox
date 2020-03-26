@@ -9,7 +9,7 @@ use Apitte\Core\Annotation\Controller;
 use Apitte\Core\Annotation\Controller\ControllerPath;
 
 /**
- * Class BaseController
+ * Class Controller
  * @ControllerPath("/api")
  */
 abstract class BaseController implements IController

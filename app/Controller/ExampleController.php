@@ -16,10 +16,10 @@ use App\Entity\User;
 /**
  * @ControllerPath("/example")
  *
- * Class Guests
+ * Class ExampleController
  * @package App\Api\Controllers
  */
-final class Example extends BaseController
+final class ExampleController extends BaseController
 {
 	/**
 	 * @var UserEntityFactory
